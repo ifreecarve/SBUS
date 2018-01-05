@@ -1,5 +1,14 @@
 #include <SBUS.h>
-SBUS sbus(Serial3);
+
+#if defined(HAVE_HWSERIAL3)
+  SBUS sbus(Serial3);
+#elif defined(HAVE_HWSERIAL2)
+  SBUS sbus(Serial2);
+#elif defined(HAVE_HWSERIAL1)
+  SBUS sbus(Serial1);
+#else
+  SBUS sbus(Serial);
+#endif
 
 void setup()
 {
