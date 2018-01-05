@@ -22,7 +22,7 @@ class SBUS {
 		long getGoodFrames();
 		long getLostFrames();
 		long getDecoderErrorFrames();
-		long long getLastTime();
+		unsigned long getLastTime();
 	private:
 		HardwareSerial & _serial;
 		int _channels[18];

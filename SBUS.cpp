@@ -124,6 +124,6 @@ long SBUS::getDecoderErrorFrames() {
 	return _decoderErrorFrames;
 }
 
-long long SBUS::getLastTime() {
+unsigned long SBUS::getLastTime() {
 	return _lastGoodFrame;
 }
