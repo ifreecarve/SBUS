@@ -10,12 +10,7 @@
   SBUS sbus(Serial);
 #endif
 
-void setup()
-{
-  sbus.begin();
-  Serial.begin(115200);
-  Serial.println("SBUS Status");
-}
+void printSBUSStatus();
 
 // this is timer2, which triggers ever 1ms and processes the incoming SBUS datastream
 ISR(TIMER2_COMPA_vect)
@@ -23,11 +18,19 @@ ISR(TIMER2_COMPA_vect)
   sbus.process();
 }
 
+void setup()
+{
+  sbus.begin();
+  Serial.begin(115200);
+  Serial.println("SBUS Status");
+}
+
 void loop()
 {
   delay(300);
   printSBUSStatus();
 }
+
 
 void printSBUSStatus()
 {
@@ -86,3 +89,4 @@ void printSBUSStatus()
   Serial.print("Time diff: ");
   Serial.println(millis() - sbus.getLastTime());
 }
+
