@@ -17,4 +17,6 @@ $ cd <arduino-sketchbook>/libraries
 $ git clone https://github.com/zendes/SBUS.git
 ```
 
+* `<arduino-sketchbook>` is `~/Documents/Arduino/libraries` on OSX
+
 Then restart your Arduino IDE and take a look at the examples.
