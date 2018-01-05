@@ -39,7 +39,7 @@ endbyte   = 00000000b (0x00)
 Data format
 ---------------
 
-data 1-22 = [ch1, 11bit][ch2, 11bit] .... [ch16, 11bit] (ch# = 0 bis 2047)
+data 1-22 = `[ch1, 11bit][ch2, 11bit] .... [ch16, 11bit]` (ch# = 0 bis 2047)
 
 * channel 1 uses 8 bits from data1 and 3 bits from data2
 * channel 2 uses last 5 bits from data2 and 6 bits from data3
