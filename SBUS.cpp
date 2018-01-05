@@ -6,6 +6,7 @@ void SBUS::begin() {
 }
 
 void SBUS::begin(bool useTimer) {
+	// FIXME: allow compilation on boards that don't have a timer.
 	if (useTimer) {
 		noInterrupts();
 		TCCR2A  = 0;
